@@ -1,7 +1,3 @@
-# Nexus Chat
-<img src="./screenshots/image1.png" width="500" alt="Screenshot 1">
-Nexus Chat is a web-based chat application developed using JavaScript for client-side functionality and MySQL and PHP for server-side operations.
-
 ## Features
 
 - User authentication and registration
@@ -10,23 +6,11 @@ Nexus Chat is a web-based chat application developed using JavaScript for client
 - Persistent message storage in MySQL database
 - Responsive design for seamless usage across devices
 
-## Screenshots
-
-![Screenshot 1](screenshots/1.png)
-![Screenshot 2](screenshots/2.png)
-![Screenshot 3](screenshots/3.png)
-![Screenshot 3](screenshots/4.png)
-![Screenshot 3](screenshots/5.png)
-
-## Demo
-
-Check out the live demo of Nexus Chat [here](https://nexuschat.000webhostapp.com/).
-
 ## Installation
 
 To run the application locally:
 
-1. Clone this repository: `git clone https://github.com/duskdev17/nexus-chat.git`
+1. Clone this repository: `https://github.com/Abba856/ChatApp.git`
 
 2. Set up your MySQL database:
    - Create a database named `chatapp`
@@ -44,6 +28,13 @@ To run the application locally:
 
 5. Open `index.php` in your web browser.
 
+## users details
+username: eesabba856@gmail.com
+password: 123456
+
+username: ansarawa@gmail.com
+password: 123456
+
 ## Technologies Used
 
 - JavaScript
@@ -53,11 +44,3 @@ To run the application locally:
 - MySQL
 - AJAX
 - Other dependencies...
-
-## Contributing
-
-Contributions are welcome! Feel free to submit pull requests or open issues if you encounter any bugs or have suggestions for improvements.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
