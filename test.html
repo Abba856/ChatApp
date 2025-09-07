@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Signup</title>
+</head>
+<body>
+  <h1>Test Signup Form</h1>
+  <form id="testForm">
+    <input type="text" id="name" placeholder="Name" required><br><br>
+    <input type="email" id="email" placeholder="Email" required><br><br>
+    <input type="password" id="password" placeholder="Password" required><br><br>
+    <input type="file" id="image" required><br><br>
+    <button type="button" id="submitBtn">Submit</button>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById('submitBtn').addEventListener('click', function() {
+      document.getElementById('result').innerHTML = "Button clicked!";
+      console.log("Button clicked!");
+    });
+  </script>
+</body>
+</html>

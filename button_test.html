@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click Test</title>
+</head>
+<body>
+    <h1>Button Click Test</h1>
+    
+    <div class="wrapper">
+        <section class="form signup">
+            <form>
+                <div class="error-text"></div>
+                <div class="field button">
+                    <input type="submit" name="submit" value="Continue to Chat">
+                </div>
+            </form>
+        </section>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("DOM loaded");
+            
+            // Try different ways to select the button
+            const button1 = document.querySelector(".button input");
+            const button2 = document.querySelector("input[type='submit']");
+            const button3 = document.querySelector("input[name='submit']");
+            const button4 = document.querySelector(".button input[type='submit']");
+            
+            console.log("Button selections:", {button1, button2, button3, button4});
+            
+            // Add click listeners to all
+            [button1, button2, button3, button4].forEach((button, index) => {
+                if (button) {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        console.log("Button " + (index+1) + " clicked!");
+                        alert("Button " + (index+1) + " clicked!");
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

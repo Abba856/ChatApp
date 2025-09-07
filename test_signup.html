@@ -1,0 +1,113 @@
+<?php
+  session_start();
+  if(isset($_SESSION['unique_id'])){
+    header("location: users.php");
+  }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatApp for Student Affairs - Test</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <style>
+    .test-btn {
+      background: #ff6b6b !important;
+      margin-top: 20px !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <section class="form signup">
+      <header>ChatApp for Student Affairs - Test</header>
+      <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
+        <div class="error-text"></div>
+        <div class="name-details">
+          <div class="field input">
+            <label>First Name</label>
+            <input type="text" name="fname" placeholder="First name" required>
+          </div>
+          <div class="field input">
+            <label>Last Name</label>
+            <input type="text" name="lname" placeholder="Last name" required>
+          </div>
+        </div>
+        <div class="field input">
+          <label>Email Address</label>
+          <input type="text" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="field input">
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Enter new password" required>
+          <i class="fas fa-eye"></i>
+        </div>
+        <div class="field image">
+          <label>Select Image</label>
+          <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
+        </div>
+        <div class="field button">
+          <input type="submit" name="submit" value="Continue to Chat">
+        </div>
+        <div class="field button">
+          <input type="button" id="testButton" class="test-btn" value="Test JavaScript">
+        </div>
+      </form>
+      <div class="link">Already signed up? <a href="login.php">Login now</a></div>
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("Test page loaded");
+        
+        // Test button to verify JavaScript is working
+        const testBtn = document.getElementById('testButton');
+        if (testBtn) {
+            testBtn.addEventListener('click', function() {
+                alert("JavaScript is working correctly!");
+            });
+        }
+        
+        // Original form handling
+        const form = document.querySelector(".signup form");
+        const continueBtn = form.querySelector(".button input[name='submit']");
+        const errorText = form.querySelector(".error-text");
+        
+        if (!form || !continueBtn || !errorText) {
+            console.error("Missing required elements");
+            return;
+        }
+        
+        // Prevent form default submission
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log("Form submission prevented");
+        });
+        
+        // Handle continue button click
+        continueBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log("Continue button clicked");
+            
+            // Simple validation
+            const fname = form.querySelector("input[name='fname']").value;
+            const lname = form.querySelector("input[name='lname']").value;
+            const email = form.querySelector("input[name='email']").value;
+            const password = form.querySelector("input[name='password']").value;
+            
+            if (!fname || !lname || !email || !password) {
+                errorText.style.display = "block";
+                errorText.textContent = "All fields are required!";
+                return;
+            }
+            
+            alert("Form would be submitted now. In a real implementation, this would send data to the server.");
+        });
+    });
+  </script>
+</body>
+</html>
